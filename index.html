@@ -4,6 +4,589 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Template - Expert Squad</title>
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+        font-weight: 200;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .main-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        font-weight: 400;
+        overflow: hidden;
+      }
+      /* == Logo styles == */
+      .logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo img {
+        background-color: transparent;
+        width: max-content;
+      }
+      @media screen and (max-width: 390px) {
+        .logo img {
+          width: 80%;
+        }
+      }
+
+      /* == Introduction section styles == */
+      .text-introduction {
+        padding: 20px;
+      }
+      .text-introduction h4 {
+        font-weight: 700;
+        font-size: 18px;
+      }
+      .text-introduction :nth-child(2) {
+        font-weight: 400;
+        color: #4c4c4c;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        font-family: Nunito, sans-serif;
+      }
+      .text-introduction :nth-child(3) {
+        font-weight: 400;
+        color: #4c4c4c;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        font-family: Nunito, sans-serif;
+      }
+      /* == Our expertise section styles ==  */
+      .our-expertise {
+        padding: 20px;
+      }
+      .our-expertise .header-expertise {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .our-expertise .header-expertise h5 {
+        font-size: 34px;
+        font-weight: 600;
+        margin: 0;
+      }
+      .our-expertise .header-expertise img {
+        width: 37px;
+        height: 40px;
+      }
+      .our-expertise .web-development {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .our-expertise .web-development h5 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 25px;
+        text-transform: uppercase;
+      }
+      .our-expertise .web-development p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #4c4c4c;
+        font-family: Nunito, sans-serif;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 8px 0;
+      }
+
+      .our-expertise .app-development {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      .our-expertise .app-development h5 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 25px;
+        text-transform: uppercase;
+      }
+      .our-expertise .app-development p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #4c4c4c;
+        font-family: Nunito, sans-serif;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 8px 0;
+      }
+      .our-expertise .uiux-development {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .our-expertise .uiux-development h5 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 25px;
+        text-transform: uppercase;
+      }
+      .our-expertise .uiux-development p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #4c4c4c;
+        font-family: Nunito, sans-serif;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 8px 0;
+      }
+      .our-expertise .motion-graphics {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .our-expertise .motion-graphics h5 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 25px;
+        text-transform: uppercase;
+      }
+      .our-expertise .motion-graphics p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #4c4c4c;
+        font-family: Nunito, sans-serif;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 8px 0;
+      }
+      .our-expertise .motion-graphics img {
+        border-radius: 10px;
+      }
+
+      @media screen and (max-width: 390px) {
+        .our-expertise .motion-graphics,
+        .our-expertise .app-development {
+          flex-direction: column;
+        }
+        .our-expertise .web-development,
+        .our-expertise .uiux-development {
+          flex-direction: column-reverse;
+        }
+        .our-expertise .web-development h5 {
+          line-height: 30px;
+        }
+        .our-expertise .app-development h5 {
+          line-height: 30px;
+        }
+        .our-expertise .uiux-development h5 {
+          line-height: 30px;
+        }
+        .our-expertise .motion-graphics h5 {
+          line-height: 30px;
+        }
+        .our-expertise .web-development img {
+          width: 100%;
+        }
+        .our-expertise .uiux-development img {
+          width: 100%;
+        }
+        .our-expertise .motion-graphics img {
+          width: 100%;
+        }
+        .our-expertise .app-development img {
+          width: 100%;
+        }
+      }
+      /* == Our Partners section styles ==  */
+      .our-partners {
+        padding: 20px;
+      }
+      .our-partners .intro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .our-partners .intro span {
+        font-family: Nunito, sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+      .our-partners .our-partners-styles {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .our-partners .our-partners-styles div {
+        border: 1px solid rgb(211, 209, 209);
+        border-radius: 8px;
+        padding: 15px 10px;
+      }
+      .our-partners .our-partners-styles span {
+        font-family: Nunito, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #040514;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .our-partners .our-partners-styles p {
+        font-family: Nunito, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #4c4c4c;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 8px 0;
+      }
+      /* == Contacts information section styles ==   */
+      .contacts-information {
+        margin: 30px 0;
+        padding: 20px;
+      }
+      .contacts-information .hr {
+        width: 100px;
+        height: 1px;
+        background-color: #040514;
+        display: flex;
+        margin: 0 auto;
+      }
+      .contacts-information .whatsapp-container span {
+        color: #3ac04c;
+      }
+      .contacts-information .whatsapp-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contacts-information p {
+        font-family: Nunito, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #4c4c4c;
+        line-height: 20px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        margin: 8px 0;
+        padding: 10px 0;
+      }
+      .contacts-information button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        text-transform: uppercase;
+        background-color: #040514;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+        margin: 0 auto;
+        outline: none;
+        border: none;
+      }
+      /* == Footer section styles ==    */
+      .footer {
+        box-shadow: 0px 0 10px rgba(163, 162, 162, 0.8);
+      }
+      .blue-background {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #040514;
+        padding: 12px 20px;
+      }
+      .blue-background .head {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .footer .footer-whatsapp {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+        font-family: Nunito, sans-serif;
+        font-size: 12px;
+      }
+      .footer .footer-location {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+        font-family: Nunito, sans-serif;
+        font-size: 12px;
+      }
+      .white-background {
+        padding: 20px 20px;
+      }
+      .white-background .ceo-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .white-background .ceo-info :nth-child(1) {
+        font-family: Nunito, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .white-background .ceo-info :nth-child(2) {
+        font-family: Nunito, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+      }
+      .white-background .visit-website {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        max-width: 150px;
+        min-width: 130px;
+        background-color: #040514;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 30px;
+        word-wrap: none;
+        font-family: Nunito, sans-serif;
+      }
+      .white-background-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="logo">
+          <img src="./images/es-logo-bg.gif" alt="logo" />
+        </div>
+        <div class="text-introduction">
+          <h4>Dear Urban Insight,</h4>
+          <p>
+            I hope this message finds you well. My name is Abdul Karim, and I am
+            the CEO & Co-founder of Expertsquad.net. We are a multidisciplinary
+            team specialising in web development, app development, UI/UX design,
+            and motion graphics.
+          </p>
+          <p>
+            As we expand our horizons, we are eager to explore potential
+            partnership opportunities with esteemed agencies like yours. We
+            believe that collaboration could lead to innovative solutions that
+            benefit both our teams and the clients we serve.
+          </p>
+        </div>
+        <div class="our-expertise">
+          <div class="header-expertise">
+            <h5>Our Expertise</h5>
+            <img src="./images//hands-down.png" alt="hands-down" />
+          </div>
+          <div class="web-development">
+            <img src="./images//web-development-es.png" alt="Alt Development" />
+
+            <div>
+              <h5>
+                Full Stack <br />
+                Web Development
+              </h5>
+              <p>
+                We specialize in building responsive, high-performance websites.
+                Our expertise covers everything from front-end design to
+                back-end functionality, ensuring a seamless user experience
+                across all devices and platforms.
+              </p>
+            </div>
+          </div>
+          <div class="app-development">
+            <div>
+              <h5>
+                App <br />
+                Development
+              </h5>
+              <p>
+                We design and develop intuitive, high-performance mobile
+                applications for both iOS and Android platforms. Our focus is on
+                creating seamless, user-friendly apps that deliver exceptional
+                functionality and a smooth experience for your users.
+              </p>
+            </div>
+            <img src="./images/app-development-es.png" alt="" />
+          </div>
+          <div class="uiux-development">
+            <img src="./images/uius-es.png" alt="Alt Development" />
+
+            <div>
+              <h5>
+                UI/UX <br />
+                Design
+              </h5>
+              <p>
+                We create beautiful, intuitive designs that make digital
+                experiences effortless and enjoyable. By focusing on user needs
+                and combining creativity with functionality, we deliver
+                interfaces that are easy to navigate, engaging, and visually
+                stunning. Every detail is carefully crafted to ensure your users
+                have a seamless and memorable experience.
+              </p>
+            </div>
+          </div>
+          <div class="motion-graphics">
+            <div>
+              <h5>
+                Motion <br />
+                Graphics
+              </h5>
+              <p>
+                We bring your ideas to life with dynamic, eye-catching motion
+                graphics that capture attention and communicate your message
+                clearly. From animated logos to explainer videos, we blend
+                creativity with storytelling to create visually compelling
+                content that engages and inspires your audience.
+              </p>
+            </div>
+            <img src="./images/motion-graphics.gif" alt="" />
+          </div>
+        </div>
+        <div class="our-partners">
+          <div class="intro">
+            <span>Why Partner with Us? </span>
+            <img src="./images/icon-down.png" alt="Icons down" />
+          </div>
+          <div class="our-partners-styles">
+            <div class="quality-assurance">
+              <span>Quality Assurance </span>
+              <p>
+                At the heart of our mission is a dedication to excellence. We
+                uphold the highest standards and implement best practices,
+                ensuring that every project radiates exceptional quality and
+                delivers outstanding results.
+              </p>
+            </div>
+            <div class="creative-synergy">
+              <span>Creative Synergy </span>
+              <p>
+                Our diverse team thrives on collaboration, where every voice
+                matters. This fusion of unique talents and perspectives fuels
+                innovative thinking, transforming your ideas into captivating
+                realities that inspire and engage.
+              </p>
+            </div>
+            <div class="global-perspective">
+              <span>Global Perspective</span>
+              <p>
+                With extensive experience working with international clients, we
+                possess a profound understanding of global markets. Partnering
+                with us means unlocking insights that can elevate your brand,
+                helping you navigate the complexities of a worldwide landscape
+                with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-information">
+          <span class="hr"></span>
+          <div class="whatsapp-container">
+            <p>
+              We would love to discuss how we can work together on upcoming
+              projects or initiatives. Please let me know a convenient time for
+              you to connect, or feel free to reach out directly at
+              <img
+                src="./images/whatsapp-icon.png"
+                alt=""
+                class="whatsapp-icon"
+              />
+              <span>whatsapp</span>
+              +8801639170321
+            </p>
+          </div>
+          <p>
+            Thank you for considering this opportunity. We look forward to the
+            possibility of collaborating with your esteemed agency.
+          </p>
+          <p>
+            Can you please reply to this mail and let me know you've received
+            it? Thank you.
+          </p>
+          <button>
+            <img src="./images/call-icon.png" alt="call icons" />
+            <span>Call Now</span>
+            <img src="./images/right-down.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <footer class="footer">
+        <div></div>
+        <div class="white-background">
+          <div class="white-background-head">
+            <div class="ceo-info">
+              <span>Abdul Karim</span>
+              <span>CEO & Co-Founder</span>
+            </div>
+            <div>
+              <div class="social-links">
+                <a href="">
+                  <img src="./images/linkedIn.png" alt="" />
+                </a>
+                <a href="">
+                  <img src="./images/discord.png" alt="" />
+                </a>
+                <a href="">
+                  <img src="./images/github.png" alt="" />
+                </a>
+                <a href="">
+                  <img src="./images/whatsapp.png" alt="" />
+                </a>
+              </div>
+              <div>
+                <a class="visit-website" href="https://expertsquad.vercel.app/">
+                  <img src="./images/world.png" alt="" />
+                  <span>Visit Website</span>
+                  <img src="./images/right-down.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blue-background">
+          <div class="head">
+            <div class="footer-whatsapp">
+              <img src="./images/whatsapp-icon-white.png" alt="Whatsapp" />
+              <span>+8801639170321</span>
+            </div>
+            <div class="footer-location">
+              <img src="./images/location-white.png" alt="Location" />
+              <span>Noakhali, Bangladesh</span>
+            </div>
+          </div>
+          <img src="./images/white-version-logo.png" alt="Logo" />
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
