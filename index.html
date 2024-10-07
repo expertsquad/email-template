@@ -29,6 +29,9 @@
         width: max-content;
       }
       @media screen and (max-width: 390px) {
+        .logo {
+          margin-top: 20px;
+        }
         .logo img {
           width: 80%;
         }
@@ -75,6 +78,8 @@
         font-size: 34px;
         font-weight: 600;
         margin: 0;
+        font-family: Nunito, sans-serif;
+        text-transform: uppercase;
       }
       .our-expertise .header-expertise img {
         width: 37px;
@@ -259,7 +264,7 @@
       }
       /* == Contacts information section styles ==   */
       .contacts-information {
-        margin: 30px 0;
+        margin: 0 0 30px 0;
         padding: 20px;
       }
       .contacts-information .hr {
@@ -267,16 +272,37 @@
         height: 1px;
         background-color: #040514;
         display: flex;
-        margin: 0 auto;
+        margin: 10px auto;
       }
-      .contacts-information .whatsapp-container span {
+      .whatsapp-icon-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: Nunito, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #4c4c4c;
+      }
+      .whatsapp-icon-container a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 3px;
+      }
+      .whatsapp-icon-container a :nth-child(2) {
         color: #3ac04c;
       }
-      .contacts-information .whatsapp-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+
+      .whatsapp-container p {
+        margin: 0;
+        padding: 0;
       }
+      .contacts-information .whatsapp-icon {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
       .contacts-information p {
         font-family: Nunito, sans-serif;
         font-size: 14px;
@@ -285,8 +311,6 @@
         line-height: 20px;
         letter-spacing: 1px;
         word-spacing: 2px;
-        margin: 8px 0;
-        padding: 10px 0;
       }
       .contacts-information button {
         display: flex;
@@ -305,13 +329,19 @@
       /* == Footer section styles ==    */
       .footer {
         box-shadow: 0px 0 10px rgba(163, 162, 162, 0.8);
+        position: relative;
       }
       .blue-background {
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: #040514;
-        padding: 12px 20px;
+        padding: 12px 20px 12px 150px;
+      }
+      @media screen and (max-width: 678px) {
+        .footer .blue-background {
+          padding: 12px 20px 12px 20px;
+        }
       }
       .blue-background .head {
         display: flex;
@@ -323,19 +353,33 @@
         align-items: center;
         gap: 5px;
         color: white;
-        font-family: Nunito, sans-serif;
+      }
+      .footer .footer-whatsapp span {
         font-size: 12px;
+        font-family: Nunito, sans-serif;
+        word-spacing: 1px;
+        letter-spacing: 1px;
       }
       .footer .footer-location {
         display: flex;
         align-items: center;
         gap: 5px;
         color: white;
-        font-family: Nunito, sans-serif;
+      }
+      .footer .footer-location span {
         font-size: 12px;
+        font-family: Nunito, sans-serif;
+        word-spacing: 1px;
+        letter-spacing: 1px;
       }
       .white-background {
         padding: 20px 20px;
+        padding-left: 150px;
+      }
+      @media screen and (max-width: 678px) {
+        .footer .white-background {
+          padding-left: 20px;
+        }
       }
       .white-background .ceo-info {
         display: flex;
@@ -379,6 +423,35 @@
         justify-content: center;
         gap: 13px;
       }
+      .footer .social-links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .footer .ceo-photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* width: 120px;
+        height: 130px; */
+        background-color: white;
+        padding: 15px 5px 5px 5px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        border-radius: 10px;
+      }
+      .footer .ceo-photo img {
+        width: 100px;
+        height: 110px;
+        overflow: hidden;
+      }
+      @media screen and (max-width: 678px) {
+        .footer .ceo-photo {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -405,10 +478,10 @@
         <div class="our-expertise">
           <div class="header-expertise">
             <h5>Our Expertise</h5>
-            <img src="./images//hands-down.png" alt="hands-down" />
+            <img src="./images/hands-down.png" alt="hands-down" />
           </div>
           <div class="web-development">
-            <img src="./images//web-development-es.png" alt="Alt Development" />
+            <img src="./images/web-development-es.png" alt="Alt Development" />
 
             <div>
               <h5>
@@ -515,15 +588,15 @@
             <p>
               We would love to discuss how we can work together on upcoming
               projects or initiatives. Please let me know a convenient time for
-              you to connect, or feel free to reach out directly at
-              <img
-                src="./images/whatsapp-icon.png"
-                alt=""
-                class="whatsapp-icon"
-              />
-              <span>whatsapp</span>
-              +8801639170321
+              you to connect, or feel free to reach out directly at Whatsapp.
             </p>
+            <div class="whatsapp-icon-container">
+              <a href="https://wa.me/+8801639170321" target="_blank" class="">
+                <img src="./images/whatsapp-icon.png" alt="" />
+                <span>whatsapp</span>
+              </a>
+              <span> +8801639170321 </span>
+            </div>
           </div>
           <p>
             Thank you for considering this opportunity. We look forward to the
@@ -541,14 +614,16 @@
         </div>
       </div>
       <footer class="footer">
-        <div></div>
+        <div class="ceo-photo">
+          <img src="./images/ceo-photo.png" alt="" />
+        </div>
         <div class="white-background">
           <div class="white-background-head">
             <div class="ceo-info">
               <span>Abdul Karim</span>
               <span>CEO & Co-Founder</span>
             </div>
-            <div>
+            <div class="social-links-container">
               <div class="social-links">
                 <a href="">
                   <img src="./images/linkedIn.png" alt="" />
@@ -575,10 +650,14 @@
         </div>
         <div class="blue-background">
           <div class="head">
-            <div class="footer-whatsapp">
+            <a
+              href="https://wa.me/+8801639170321"
+              target="_blank"
+              class="footer-whatsapp"
+            >
               <img src="./images/whatsapp-icon-white.png" alt="Whatsapp" />
               <span>+8801639170321</span>
-            </div>
+            </a>
             <div class="footer-location">
               <img src="./images/location-white.png" alt="Location" />
               <span>Noakhali, Bangladesh</span>
