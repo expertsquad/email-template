@@ -58,7 +58,7 @@
       .coupon-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 0 20px;
         align-items: center;
         padding: 0 20px;
       }
@@ -73,18 +73,25 @@
         padding: 15px;
         text-align: center;
         border-radius: 8px;
+        margin-bottom: 15px;
+
       }
       .coupon a{
         color: #ffffff;
       }
 
-      .coupon img {
+      .coupon .image{
+        background-color: #ffffff;
         width: 80px;
         height: 60px;
         margin: 10px auto;
-        background-color: #ffffff;
         padding: 30px;
         border-radius: 8px;
+      }
+
+      .coupon img {
+        width: 80px;
+        height: 60px;
         object-fit: contain;
       }
       .coupon .discount {
@@ -97,12 +104,15 @@
         background-color: #222;
         color: #87e64b;
         padding: 10px 30px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         letter-spacing: 1px;
         border: 1px dashed #ff9500;
         border-radius: 30px;
         margin-bottom: 15px;
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .visit-store {
         text-decoration: underline;
@@ -219,37 +229,43 @@
             <!-- Coupon Section -->
           <div class="coupon-container">
             <div class="coupon">
-              <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2FNoon_Logo.webp?alt=media&token=b52f0d71-43bb-4e81-8579-a6214f784bbd" alt="Noon" />
+              <div class="image">
+                <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fnoon-logo.png?alt=media&token=94166a0b-9b2a-484a-a444-36aeda4e1b05" alt="Noon" />
+              </div>
               <p class="discount">Max 10% Cashback</p>
               <div class="coupon-actions">
-                <div class="coupon-code">BLACK51</div>
+                <div class="coupon-code">black51</div>
                 <a href="https://clk.omgt4.com/?AID=2353399&PID=55407&UID=blackfridayemail" target="_blank" class="visit-store">Visit Store</a>
               </div>
             </div>
 
             <div class="coupon">
-              <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fnamshi-logo-3A14B0102B-seeklogo.com.png?alt=media&token=109493fe-e948-4cfe-8d56-7d07bc1b1a7b" alt="Namshi" />
+              <div class="image">
+                <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fnamshi-logo-3A14B0102B-seeklogo.com.png?alt=media&token=109493fe-e948-4cfe-8d56-7d07bc1b1a7b" alt="Namshi" />
+              </div>
               <p class="discount">20% OFF</p>
               <div class="coupon-actions">
-                <div class="coupon-code">BLACK51</div>
+                <div class="coupon-code">black51</div>
                 <a href="https://clk.omgt4.com/?AID=2353399&PID=38741&UID=blackfridayemail" target="_blank" class="visit-store">Visit Store</a>
               </div>
             </div>
 
             <div class="coupon">
-              <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fsivvi-logo-WEbp.webp?alt=media&token=2f531afe-074a-4cda-ae7a-eebf67cd9238" alt="Sivvi" />
+             <div class="image">
+              <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fsivvi-logo.png?alt=media&token=db83c48d-8dca-4bad-95c7-ecef8ba3066c" alt="Sivvi" />
+             </div>
               <p class="discount">20% OFF</p>
               <div class="coupon-actions">
-                <div class="coupon-code">BLACK51</div>
+                <div class="coupon-code">black51</div>
                 <a href="https://www.sivvi.com/uae-en/" target="_blank" class="visit-store">Visit Store</a>
               </div>
             </div>
 
             <div class="coupon">
-              <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2FUnder_armour_logo.svg.png?alt=media&token=4dbd04f7-b55a-4dce-b50a-001e70211331" alt="Under Armour" />
+              <div class="image"><img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2FUnder_armour_logo.svg.png?alt=media&token=4dbd04f7-b55a-4dce-b50a-001e70211331" alt="Under Armour" /></div>
               <p class="discount">20% OFF</p>
               <div class="coupon-actions">
-                <div class="coupon-code">CR88</div>
+                <div class="coupon-code">cr88</div>
                 <a href="https://www.underarmour.com/" target="_blank" class="visit-store">Visit Store</a>
               </div>
             </div>
