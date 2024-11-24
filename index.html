@@ -11,28 +11,22 @@
         font-family: Arial, sans-serif;
         background-color: #2d3029;
       }
-      table {
-        border-spacing: 0;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      td {
-        padding: 0;
-      }
       img {
         display: block;
         width: 100%;
         height: auto;
       }
       .container {
+        max-width: 600px;
         background-color: #000;
         color: #ffffff;
         margin-top: 10px;
         margin-bottom: 10px;
         border-radius: 10px;
         overflow: hidden;
-        max-width: 600px;
+        border-spacing: 0;
+        width: 100%;
+        margin: 0 auto;
       }
       .header {
         text-align: center;
@@ -62,10 +56,14 @@
         color: #999;
       }
       .coupon-container {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-column: auto;
         gap: 15px;
+        align-items: center;
         
+      }
+      .coupon-container a{
+        color: #ffffff;
       }
       .coupon {
         width: calc(45% - 10px); /* Two cards per row by default */
@@ -74,6 +72,10 @@
         text-align: center;
         border-radius: 8px;
       }
+      .coupon a{
+        color: #ffffff;
+      }
+
       .coupon img {
         width: 80px;
         height: 60px;
@@ -106,7 +108,6 @@
         border-radius: 30px;
       }
       .visit-store {
-        color: #ffffff;
         text-decoration: underline;
         font-size: 16px;
         margin: 15px;
@@ -118,7 +119,6 @@
       }
       .visit-mena-coupon {
         background-color: #cb380f;
-        color: #ffffff;
         font-size: 16px;
         text-decoration: none;
         padding: 10px 20px;
@@ -131,19 +131,20 @@
         width: 200px;
       }
       .footer {
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  text-align: center; /* Align text within elements to the center */
-  padding: 20px;
-  font-size: 14px;
-  background-color: #1a1a1a;
-  color: #999;
-}
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        text-align: center; /* Align text within elements to the center */
+        padding: 20px;
+        font-size: 14px;
+        background-color: #1a1a1a;
+        color: #999;
+      }
 
 .footer .logo {
   margin-bottom: 10px;
+  margin: auto 0;
 }
 
 .footer img {
@@ -160,12 +161,14 @@
   margin: 5px 0; /* Add spacing between paragraphs */
 }
 
+
       @media only screen and (max-width: 600px) {
         .content {
           padding: 10px;
         }
         .coupon {
           padding: 10px;
+          width: 100%;
         }
         .coupon-code {
           font-size: 14px;
@@ -184,34 +187,35 @@
     </style>
   </head>
   <body>
-    <table class="container">
-      <tr>
-        <td class="header">
-          <img
-            class="logo"
-            src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Flogo.png?alt=media&token=687a61bd-b61b-43b1-b785-83af2f8eec69"
-            alt="Mena Coupon"
-          />
-          <h1>
-            Special Offer Of <br />
-            The Week
-          </h1>
-          <img
-            class="bf-bg"
-            src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fblack-friday-bg.png?alt=media&token=c2a58cc4-444b-4b85-ad76-b9483a7443b2"
-            alt="Black Friday"
-          />
-        </td>
-      </tr>
-      <tr>
-        <td class="content">
-          <h2>Choose Best Offer</h2>
+    <div class="container" style="width: 600px; margin: 0 auto; background-color: #000; border-radius: 10px; overflow: hidden;">
+        <div>
+            <div class="header">
+                <img
+                class="logo"
+                src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Flogo.png?alt=media&token=687a61bd-b61b-43b1-b785-83af2f8eec69"
+                alt="Mena Coupon"
+              />
+              <h1>
+                Special Offer Of <br />
+                The Week
+              </h1>
+              <img
+                class="bf-bg"
+                src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fblack-friday-bg.png?alt=media&token=c2a58cc4-444b-4b85-ad76-b9483a7443b2"
+                alt="Black Friday"
+              />
+            </div>
+        </div>
+
+        <div>
+            <div class="content">
+                <h2>Choose Best Offer</h2>
           <p class="textp">
             Choose Your Favorite Store and Get the Black
             Friday special discount
           </p>
-
-          <!-- Coupon Section -->
+            </div>
+            <!-- Coupon Section -->
           <div class="coupon-container">
             <div class="coupon">
               <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2FNoon_Logo.webp?alt=media&token=b52f0d71-43bb-4e81-8579-a6214f784bbd" alt="Noon" />
@@ -248,27 +252,25 @@
                 <a href="https://www.underarmour.com/" target="_blank" class="visit-store">Visit Store</a>
               </div>
             </div>
-          </div>
-<div>
-    <p class="your-journey">Your Savings Journey Begins Here.</p>
-    <a href="https://mena-coupon.com/" target="_blank" class="visit-mena-coupon">Visit Mena Coupon</a>
-</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="footer">
-        <div class="logo">
-            <a href="https://mena-coupon.com/" target="_blank">
-                <img class="logos" src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Flogo.png?alt=media&token=687a61bd-b61b-43b1-b785-83af2f8eec69"
-            alt="Mena Coupon"
-          />
-            </a>
+            <div>
+                <p class="your-journey">Your Savings Journey Begins Here.</p>
+                <a href="https://mena-coupon.com/" target="_blank" class="visit-mena-coupon">Visit Mena Coupon</a>
+            </div>
         </div>
-          <p>© 2024 Mena Coupon. All rights reserved.</p>
+
+        <div>
+            <div class="footer">
+                <div class="logo">
+                    <a href="https://mena-coupon.com/" target="_blank">
+                        <img class="logos" src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Flogo.png?alt=media&token=687a61bd-b61b-43b1-b785-83af2f8eec69"
+                    alt="Mena Coupon"
+                  />  </a>
+                </div>
+                <p>© 2024 Mena Coupon. All rights reserved.</p>
           <p><a href="https://wa.me/+8801850711231" target="_blank">+880 1850711231</a></p>
           <p>2nd Floor, Moshiur market, CP, CTG, Bangladesh</p>
-        </td>
-      </tr>
-    </table>
+            </div>
+        </div>
+</div>
   </body>
 </html>
