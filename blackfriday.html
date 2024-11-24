@@ -1,160 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email Template</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #2d3029;
-    }
-    table {
-      border-spacing: 0;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    td {
-      padding: 0;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .container {
-      background-color: #000;
-      color: #fff;
-    }
-    .header {
-      text-align: center;
-      padding: 20px;
-    }
-    .header img {
-      width: 150px;
-      margin-bottom: 10px;
-    }
-    .content {
-      padding: 20px;
-    }
-    .coupon {
-      background-color: #333;
-      margin-bottom: 20px;
-      padding: 15px;
-      text-align: center;
-      border-radius: 8px;
-    }
-    .coupon img {
-      width: 100px;
-      margin: 10px auto;
-    }
-    .coupon .discount {
-      color: #ff9500;
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .coupon-code {
-      background-color: #222;
-      color: #87E64B;
-      padding: 10px 20px;
-      display: inline-block;
-      margin: 10px 0;
-      font-size: 16px;
-      letter-spacing: 1px;
-      border: 1px dashed #ff9500;
-    }
-    .visit-store {
-      background-color: #ff9500;
-      color: #000;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      display: inline-block;
-    }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      background-color: #1a1a1a;
-      color: #999;
-    }
-    .footer a {
-      color: #ff9500;
-      text-decoration: none;
-    }
-    @media only screen and (max-width: 600px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #2d3029;
+      }
+      table {
+        border-spacing: 0;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      td {
+        padding: 0;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .container {
+        background-color: #000;
+        color: #fff;
+      }
+      .header {
+        text-align: center;
+        /* padding: 20px; */
+      }
+      .header .logo {
+        width: 150px;
+        margin-bottom: 10px;
+        padding: 20px;
+      }
+      .header h1 {
+        font-weight: 400;
+        font-size: 40px;
+      }
       .content {
-        padding: 10px;
+        padding: 20px;
+      }
+      .content h2,
+      p {
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .content p {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .content .your-journey {
+        font-size: 24px;
       }
       .coupon {
-        padding: 10px;
+        background-color: #333;
+        margin-bottom: 20px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 8px;
+      }
+      .coupon img {
+        width: 100px;
+        margin: 10px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+      }
+      .coupon .discount {
+        color: #ff9500;
+        font-size: 20px;
+        font-weight: bold;
       }
       .coupon-code {
-        font-size: 14px;
-        padding: 8px 15px;
+        background-color: #222;
+        color: #87e64b;
+        padding: 10px 20px;
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 1px dashed #ff9500;
+        border-radius: 4px;
       }
       .visit-store {
-        font-size: 14px;
-        padding: 8px 15px;
+        background-color: #cb380f;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        display: inline-block;
+        margin: auto 0;
       }
-    }
-  </style>
-</head>
-<body>
-  <table class="container">
-    <tr>
-      <td class="header">
-        <img src="https://your-logo-url.com/logo.png" alt="Mena Coupon">
-        <h1>Special Offer Of The Week</h1>
-      </td>
-    </tr>
-    <tr>
-      <td class="content">
-        <h2>Black Friday</h2>
-        <p>Choose Your Favorite Store and Get the Black Friday special discount!</p>
+      .visit-mena-coupon {
+        background-color: #cb380f;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        display: inline-block;
 
-        <!-- Coupon Section -->
-        <div class="coupon">
-          <img src="sivvi.png" alt="Sivvi">
-          <p class="discount">25% OFF</p>
-          <div class="coupon-code">BLACK51</div>
-          <a href="#" class="visit-store">Visit Store</a>
-        </div>
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        background-color: #1a1a1a;
+        color: #999;
+      }
+      .footer a {
+        color: #ff9500;
+        text-decoration: none;
+      }
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 10px;
+        }
+        .coupon {
+          padding: 10px;
+        }
+        .coupon-code {
+          font-size: 14px;
+          padding: 8px 15px;
+        }
+        .visit-store {
+          font-size: 14px;
+          padding: 8px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="container">
+      <tr>
+        <td class="header">
+          <img
+            class="logo"
+            src="/images/mena-coupon-logo.png"
+            alt="Mena Coupon"
+          />
+          <h1>
+            Special Offer Of <br />
+            The Week
+          </h1>
+          <img
+            class="bf-bg"
+            src="/images/black-friday-bg.png"
+            alt="Black Friday"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="content">
+          <h2>Choose Best Offer</h2>
+          <p>
+            Choose Your Favorite Store and Get the Black <br />
+            Friday special discount
+          </p>
 
-        <div class="coupon">
-          <img src="https://your-logo-url.com/sivvi.png" alt="Sivvi">
-          <p class="discount">25% OFF</p>
-          <div class="coupon-code">BLACK51</div>
-          <a href="#" class="visit-store">Visit Store</a>
-        </div>
+          <!-- Coupon Section -->
+          <div class="coupon">
+            <img src="/images/offer-img.png" alt="Sivvi" />
+            <p class="discount">25% OFF</p>
+            <div class="coupon-code">BLACK51</div>
+            <a href="#" class="visit-store">Visit Store</a>
+          </div>
 
-        <div class="coupon">
-          <img src="https://your-logo-url.com/sivvi.png" alt="Sivvi">
-          <p class="discount">25% OFF</p>
-          <div class="coupon-code">BLACK51</div>
-          <a href="#" class="visit-store">Visit Store</a>
-        </div>
+          <div class="coupon">
+            <img src="/images/offer-img.png" alt="Sivvi" />
+            <p class="discount">25% OFF</p>
+            <div class="coupon-code">BLACK51</div>
+            <a href="#" class="visit-store">Visit Store</a>
+          </div>
 
-        <p>Your Savings Journey Begins Here.</p>
-        <a href="#" class="visit-store">Visit Mena Coupon</a>
-      </td>
-    </tr>
-    <tr>
-      <td class="footer">
-        <p>© 2024 Mena Coupon. All rights reserved.</p>
-        <p>
-          <a href="#">Home</a> | 
-          <a href="#">Coupon</a> | 
-          <a href="#">Store</a> | 
-          <a href="#">Blog</a>
-        </p>
-        <p>+880 1877-645-4243</p>
-        <p>901 N. Pitt Street, Suite Alexandria, Chaprashir Hat</p>
-      </td>
-    </tr>
-  </table>
-</body>
+          <div class="coupon">
+            <img src="/images/offer-img.png" alt="Sivvi" />
+            <p class="discount">25% OFF</p>
+            <div class="coupon-code">BLACK51</div>
+            <a href="#" class="visit-store">Visit Store</a>
+          </div>
+
+          <p class="your-journey">Your Savings Journey Begins Here.</p>
+          <a href="#" class="visit-mena-coupon">Visit Mena Coupon</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+          <p>© 2024 Mena Coupon. All rights reserved.</p>
+          <p>
+            <a href="#">Home</a> | <a href="#">Coupon</a> |
+            <a href="#">Store</a> |
+            <a href="#">Blog</a>
+          </p>
+          <p>+880 1877-645-4243</p>
+          <p>901 N. Pitt Street, Suite Alexandria, Chaprashir Hat</p>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
