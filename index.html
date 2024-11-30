@@ -11,11 +11,6 @@
         font-family: Arial, sans-serif;
         background-color: #2d3029;
       }
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
       .container {
         max-width: 600px;
         background-color: #000;
@@ -27,19 +22,6 @@
         border-spacing: 0;
         width: 100%;
         margin: 0 auto;
-      }
-      .header {
-        text-align: center;
-      }
-      .header .logo {
-        width: 150px;
-        margin-bottom: 10px;
-        padding: 20px;
-      }
-      
-      .header h1 {
-        font-weight: 400;
-        font-size: 40px;
       }
       .content {
         padding: 20px;
@@ -54,6 +36,7 @@
       }
       .content .textp{
         color: #999;
+        line-height: 24px;
       }
       .coupon-container {
         display: grid;
@@ -87,12 +70,11 @@
         margin: 10px auto;
         padding: 30px;
         border-radius: 8px;
+        align-items: center;
       }
-
-      .coupon img {
-        width: 80px;
-        height: 60px;
-        object-fit: contain;
+      .coupon .image h2{
+        color: #000;
+        font-size: 20px;
       }
       .coupon .discount {
         color: #ff9500;
@@ -149,18 +131,9 @@
         color: #999;
       }
 
-.footer .logo {
+.footer hr{
+  border: 1px solid #3d3d3d;
   margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer img {
-  width: 200px; 
-  margin: auto 0;
-  justify-content: center;
-  height: auto;
 }
 
 .footer a {
@@ -190,39 +163,16 @@
         .coupon {
           width: 100%; 
         }
-        .header h1{
-            font-size: 30px;
-            font-weight: bold;
-        }
       }
     </style>
   </head>
   <body>
     <div class="container" style="width: 600px; margin: 0 auto; background-color: #000; border-radius: 10px; overflow: hidden;">
-        <div>
-            <div class="header">
-                <img
-                class="logo"
-                src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Flogo.png?alt=media&token=687a61bd-b61b-43b1-b785-83af2f8eec69"
-                alt="Mena Coupon"
-              />
-              <h1>
-                Special Offer Of <br />
-                The Week
-              </h1>
-              <img
-                class="bf-bg"
-                src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fblack-friday-bg.png?alt=media&token=c2a58cc4-444b-4b85-ad76-b9483a7443b2"
-                alt="Black Friday"
-              />
-            </div>
-        </div>
-
-        <div>
+              <div>
             <div class="content">
                 <h2>Choose Best Offer</h2>
           <p class="textp">
-            Choose Your Favorite Store and Get the Black
+            Choose Your Favorite Store and Get the Black <br />
             Friday special discount
           </p>
             </div>
@@ -230,7 +180,7 @@
           <div class="coupon-container">
             <div class="coupon">
               <div class="image">
-                <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fnoon-logo.png?alt=media&token=94166a0b-9b2a-484a-a444-36aeda4e1b05" alt="Noon" />
+                <h2>Noon</h2>
               </div>
               <p class="discount">Max 10% Cashback</p>
               <div class="coupon-actions">
@@ -241,7 +191,8 @@
 
             <div class="coupon">
               <div class="image">
-                <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fnamshi-logo-3A14B0102B-seeklogo.com.png?alt=media&token=109493fe-e948-4cfe-8d56-7d07bc1b1a7b" alt="Namshi" />
+                
+                <h2>Namshi</h2>
               </div>
               <p class="discount">20% OFF</p>
               <div class="coupon-actions">
@@ -252,7 +203,8 @@
 
             <div class="coupon">
              <div class="image">
-              <img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Fsivvi-logo.png?alt=media&token=db83c48d-8dca-4bad-95c7-ecef8ba3066c" alt="Sivvi" />
+              
+                <h2>Sivvi</h2>
              </div>
               <p class="discount">20% OFF</p>
               <div class="coupon-actions">
@@ -262,7 +214,9 @@
             </div>
 
             <div class="coupon">
-              <div class="image"><img src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2FUnder_armour_logo.svg.png?alt=media&token=4dbd04f7-b55a-4dce-b50a-001e70211331" alt="Under Armour" /></div>
+              <div class="image">
+                <h2>Under Armour</h2>
+              </div>
               <p class="discount">20% OFF</p>
               <div class="coupon-actions">
                 <div class="coupon-code">cr88</div>
@@ -279,10 +233,8 @@
         <div>
             <div class="footer">
                 <div class="logo">
-                    <a href="https://mena-coupon.com/" target="_blank">
-                        <img class="logos" src="https://firebasestorage.googleapis.com/v0/b/abdappdb.appspot.com/o/blackFriday%2Flogo.png?alt=media&token=687a61bd-b61b-43b1-b785-83af2f8eec69"
-                    alt="Mena Coupon"
-                  />  </a>
+                    <a style="color: white;" href="https://www.mena-coupon.com/" target="_blank"><h2 >Mena Coupon</h2></a>
+                    <hr>
                 </div>
                 <p>© 2024 Mena Coupon. All rights reserved.</p>
           <p><a href="https://wa.me/+8801850711231" target="_blank">+880 1850711231</a></p>
